@@ -1,0 +1,96 @@
+body {
+    height: 100%;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.container {
+    display: grid;
+    grid-template-columns: 200px auto; 
+    grid-template-areas: 
+        "Sidebar Right"
+        "Sidebar Right"
+        "Sidebar Right";
+    width: 100%;
+    height: 100vh;
+    /* grid-template-rows: auto 1fr 1fr;  */
+    /* justify-content: center; */
+    /* align-items: stretch; */
+    /* column-gap: 5px; */
+    border-color: #00000000;
+    background-color: black;
+}
+.leftBox {
+    grid-area: Sidebar;
+    display: grid;
+    grid-template-areas: 
+        "Note"
+        "Note"
+        "newNote";
+    grid-template-rows: auto auto 100px;
+    /* grid-area: list; */
+    /* grid-auto-flow: row; */
+    /* justify-content:left; */
+    /* flex: 0 0 20%; */
+    /* flex-direction: column; */
+    /* width: 20%; */
+    /* height: 100%; */
+    background-color: #ffffff;
+    align-items: stretch;
+}
+.noteButtonList {
+    grid-area: Note;
+    width:100%;
+}
+.rightBox {
+    grid-area: Right;
+    display: grid;
+    grid-template-rows: 80px auto auto;
+    grid-template-areas: 
+        "Title"
+        "noteContent"
+        "noteContent";
+    /* flex: 0 0 80%; */
+    /* width: 80%; */
+    /* height: 100%; */
+    background-color: #ffffffff;
+}
+.title {
+    grid-area: Title;
+    text-decoration-color: black;
+    font-size: 30px;
+    resize: none;  
+    align-content: center;
+}
+.notes {
+    grid-area: noteContent;
+    /* flex: 0 0 0; */
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+}
+
+.textarea {
+  width: 100%;
+  height: 100%;
+  resize: none;           
+  box-sizing: border-box;
+}
+
+.noteButtonList button {
+  width: 100%;
+  height: 64px;
+  display: block;
+}
+.newNote {
+  grid-area: newNote;
+}
+
+textarea::placeholder {
+  color: #000000; 
+  /* font-style: italic; */
+
+}
+input::placeholder {
+  color: #000000; 
+  /* font-style: italic; */
+}
